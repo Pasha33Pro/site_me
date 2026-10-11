@@ -1,19 +1,493 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pasha33Pro | Full-Stack Developer & IoT Engineer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-      html, body { margin: 0; padding: 0; width: 100%; height: 100%; }
-      body { background: #0a0a0f; }
-    </style>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pasha33Pro | Full-Stack Developer & IoT Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="nav-logo">
+          <span class="logo-icon">></span>
+          <span>Pasha33<span class="text-secondary">Pro</span></span>
+        </a>
+        <div class="nav-links" id="navLinks">
+          <a href="#home" class="nav-link"><span class="text-primary">></span> home</a>
+          <a href="#about" class="nav-link"><span class="text-primary">></span> about</a>
+          <a href="#skills" class="nav-link"><span class="text-primary">></span> skills</a>
+          <a href="#roadmap" class="nav-link"><span class="text-primary">></span> roadmap</a>
+          <a href="#projects" class="nav-link"><span class="text-primary">></span> projects</a>
+          <a href="#contact" class="nav-link"><span class="text-primary">></span> contact</a>
+        </div>
+        <button class="burger" id="burger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero">
+      <div class="hero-bg">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+      </div>
+      <div class="hero-content">
+        <div class="status-badge reveal">
+          <span class="status-dot"></span>
+          <span>Available for projects</span>
+        </div>
+        <h1 class="hero-title reveal">
+          <span class="text-white">Hi, I'm </span>
+          <span class="gradient-text">Pasha33Pro</span>
+        </h1>
+        <div class="hero-typing reveal">
+          <span class="text-primary">$</span>
+          <span id="typedText"></span>
+          <span class="cursor-blink">▊</span>
+        </div>
+        <p class="hero-desc reveal">
+          Building the bridge between software and hardware. From scalable web applications
+          to IoT ecosystems — I craft digital solutions that connect the physical and virtual worlds.
+        </p>
+        <div class="hero-buttons reveal">
+          <a href="#projects" class="btn btn-primary glow-pulse">
+            <span>&#60;/&#62;</span> View Projects
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <span>✉</span> Get In Touch
+          </a>
+        </div>
+      </div>
+      <a href="#about" class="scroll-hint">
+        <span>scroll</span>
+        <span class="scroll-arrow">↓</span>
+      </a>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-cmd"><span class="text-text-dim">$</span> whoami</span>
+          <h2 class="section-title gradient-text">About Me</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="about-grid">
+          <div class="reveal">
+            <div class="terminal">
+              <div class="terminal-header">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="terminal-title">~/pasha33pro/about</span>
+              </div>
+              <div class="terminal-body">
+                <p><span class="kw">const</span> <span class="var">developer</span> = {</p>
+                <p class="ml">"<span class="key">name</span>": "<span class="str">Pasha33Pro</span>",</p>
+                <p class="ml">"<span class="key">role</span>": "<span class="str">Full-Stack & IoT Engineer</span>",</p>
+                <p class="ml">"<span class="key">passion</span>": "<span class="str">Connecting things</span>",</p>
+                <p class="ml">"<span class="key">stack</span>": ["<span class="str">web</span>", "<span class="str">mobile</span>", "<span class="str">IoT</span>", "<span class="str">cloud</span>"],</p>
+                <p class="ml">"<span class="key">motto</span>": "<span class="str">Code that bridges worlds</span>"</p>
+                <p>};</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-text reveal">
+            <p>
+              I'm a full-stack developer who doesn't limit himself to just building websites.
+              My expertise spans from crafting pixel-perfect frontends and robust backends
+              to designing IoT systems that bring intelligence to everyday objects.
+            </p>
+            <p>
+              Whether it's a React application with a Node.js backend, a smart home system
+              with ESP32 microcontrollers, or an industrial IoT dashboard — I love the challenge
+              of making hardware and software work together seamlessly.
+            </p>
+            <div class="stats-grid">
+              <div class="stat-card"><div class="stat-num gradient-text">50+</div><div class="stat-label">Projects</div></div>
+              <div class="stat-card"><div class="stat-num gradient-text">5+</div><div class="stat-label">Years Exp</div></div>
+              <div class="stat-card"><div class="stat-num gradient-text">30+</div><div class="stat-label">IoT Devices</div></div>
+              <div class="stat-card"><div class="stat-num gradient-text">∞</div><div class="stat-label">Curiosity</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-cmd"><span class="text-text-dim">$</span> skills --list</span>
+          <h2 class="section-title gradient-text">Tech Stack</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="skills-grid">
+          <!-- Frontend -->
+          <div class="skill-card reveal">
+            <div class="skill-header text-primary">
+              <span class="skill-icon">🌐</span>
+              <h3>Frontend</h3>
+            </div>
+            <div class="skill-tags">
+              <span>React</span><span>Next.js</span><span>TypeScript</span>
+              <span>Tailwind CSS</span><span>Vue.js</span><span>Three.js</span>
+            </div>
+          </div>
+          <!-- Backend -->
+          <div class="skill-card reveal">
+            <div class="skill-header text-secondary">
+              <span class="skill-icon">🖥</span>
+              <h3>Backend</h3>
+            </div>
+            <div class="skill-tags">
+              <span>Node.js</span><span>Python</span><span>Go</span>
+              <span>PostgreSQL</span><span>MongoDB</span><span>Redis</span>
+            </div>
+          </div>
+          <!-- IoT -->
+          <div class="skill-card reveal">
+            <div class="skill-header text-accent">
+              <span class="skill-icon">🔧</span>
+              <h3>IoT & Hardware</h3>
+            </div>
+            <div class="skill-tags">
+              <span>ESP32/ESP8266</span><span>Arduino</span><span>Raspberry Pi</span>
+              <span>MQTT</span><span>Zigbee</span><span>LoRa</span>
+            </div>
+          </div>
+          <!-- Cloud -->
+          <div class="skill-card reveal">
+            <div class="skill-header text-primary">
+              <span class="skill-icon">☁</span>
+              <h3>Cloud & DevOps</h3>
+            </div>
+            <div class="skill-tags">
+              <span>AWS</span><span>Docker</span><span>Kubernetes</span>
+              <span>CI/CD</span><span>Terraform</span><span>Linux</span>
+            </div>
+          </div>
+          <!-- Mobile -->
+          <div class="skill-card reveal">
+            <div class="skill-header text-secondary">
+              <span class="skill-icon">📱</span>
+              <h3>Mobile</h3>
+            </div>
+            <div class="skill-tags">
+              <span>React Native</span><span>Flutter</span><span>PWA</span>
+              <span>BLE</span><span>NFC</span><span>Push Notifications</span>
+            </div>
+          </div>
+          <!-- Security -->
+          <div class="skill-card reveal">
+            <div class="skill-header text-accent">
+              <span class="skill-icon">🛡</span>
+              <h3>Security</h3>
+            </div>
+            <div class="skill-tags">
+              <span>OAuth2</span><span>JWT</span><span>TLS/SSL</span>
+              <span>Pen Testing</span><span>IoT Security</span><span>Encryption</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ROADMAP ===== -->
+    <section id="roadmap" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-cmd"><span class="text-text-dim">$</span> cat journey.log</span>
+          <h2 class="section-title gradient-text">Roadmap</h2>
+          <div class="section-line"></div>
+        </div>
+        <p class="section-subtitle reveal">
+          От первого «Hello World» до спутниковых технологий — путь, который я прошёл и продолжаю идти.
+        </p>
+
+        <div class="timeline">
+          <div class="timeline-line"></div>
+
+          <!-- 2022 -->
+          <div class="timeline-item reveal" data-side="left">
+            <div class="timeline-marker" style="--marker-color: #3b82f6;">
+              <span>🎓</span>
+            </div>
+            <div class="timeline-card" style="--card-accent: #3b82f6;">
+              <div class="timeline-card-header" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">
+                <div>
+                  <div class="timeline-year">2022</div>
+                </div>
+                <div class="timeline-card-titles">
+                  <div class="timeline-card-title">Foundation</div>
+                  <div class="timeline-card-subtitle">Закладка фундамента</div>
+                </div>
+              </div>
+              <div class="timeline-card-body">
+                <div class="timeline-entry entry-education">
+                  <span class="entry-icon">🎓</span>
+                  <div>
+                    <div class="entry-title">KiberOne Academy</div>
+                    <div class="entry-desc">Первое знакомство с Python и алгоритмическим мышлением.</div>
+                  </div>
+                </div>
+                <div class="timeline-entry entry-project">
+                  <span class="entry-icon">&#60;/&#62;</span>
+                  <div>
+                    <div class="entry-title">Первый проект: Peugeot 301 в 2D</div>
+                    <div class="entry-desc">Отрисовка машины с помощью Python Turtle — первый опыт визуализации кодом.</div>
+                  </div>
+                </div>
+                <div class="timeline-entry entry-inspiration">
+                  <span class="entry-icon">⚡</span>
+                  <div>
+                    <div class="entry-title">Книга «Python глазами хакера»</div>
+                    <div class="entry-desc">BHV — сформировала взгляд на код как на искусство.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2023 -->
+          <div class="timeline-item reveal" data-side="right">
+            <div class="timeline-marker" style="--marker-color: #22c55e;">
+              <span>🚀</span>
+            </div>
+            <div class="timeline-card" style="--card-accent: #22c55e;">
+              <div class="timeline-card-header" style="background: linear-gradient(135deg, #22c55e, #10b981);">
+                <div>
+                  <div class="timeline-year">2023</div>
+                </div>
+                <div class="timeline-card-titles">
+                  <div class="timeline-card-title">Expansion & First Wins</div>
+                  <div class="timeline-card-subtitle">Расширение стека и первые победы</div>
+                </div>
+              </div>
+              <div class="timeline-card-body">
+                <div class="timeline-entry entry-education">
+                  <span class="entry-icon">🎓</span>
+                  <div>
+                    <div class="entry-title">Академия TOP</div>
+                    <div class="entry-desc">Освоение C++, C#, SQL и FullStack Web (HTML, CSS, JS, хостинг, домены, SSL).</div>
+                  </div>
+                </div>
+                <div class="timeline-entry entry-iot">
+                  <span class="entry-icon">🔧</span>
+                  <div>
+                    <div class="entry-title">IoT Start: NS8266</div>
+                    <div class="entry-desc">Network Scan ESP8266 — первый шаг в мир интернета вещей и микроконтроллеров.</div>
+                  </div>
+                </div>
+                <div class="timeline-entry entry-project">
+                  <span class="entry-icon">🤖</span>
+                  <div>
+                    <div class="entry-title">Хакатон Кванториума: TG-33</div>
+                    <div class="entry-desc">Соло-разработка образовательного Telegram-бот-квеста менее чем за 2 недели с нуля.</div>
+                  </div>
+                </div>
+                <div class="timeline-entry entry-award">
+                  <span class="entry-icon">🏅</span>
+                  <div>
+                    <div class="entry-title">Олимпиада ТИИМ <span class="badge badge-bronze">🥉 BRONZE</span></div>
+                    <div class="entry-desc">3 место — первая олимпиадная награда.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2024 -->
+          <div class="timeline-item reveal" data-side="left">
+            <div class="timeline-marker" style="--marker-color: #a855f7;">
+              <span>🤖</span>
+            </div>
+            <div class="timeline-card" style="--card-accent: #a855f7;">
+              <div class="timeline-card-header" style="background: linear-gradient(135deg, #a855f7, #ec4899);">
+                <div>
+                  <div class="timeline-year">2024</div>
+                </div>
+                <div class="timeline-card-titles">
+                  <div class="timeline-card-title">Automation & NLP</div>
+                  <div class="timeline-card-subtitle">Автоматизация и профессиональный опыт</div>
+                </div>
+              </div>
+              <div class="timeline-card-body">
+                <div class="timeline-entry entry-project">
+                  <span class="entry-icon">🎙</span>
+                  <div>
+                    <div class="entry-title">WT_Control</div>
+                    <div class="entry-desc">Система голосового управления танками в War Thunder через NLP.</div>
+                  </div>
+                </div>
+                <div class="timeline-entry entry-project">
+                  <span class="entry-icon">🎙</span>
+                  <div>
+                    <div class="entry-title">Voice Assistant</div>
+                    <div class="entry-desc">Голосовое управление ПК с уведомлениями в Telegram.</div>
+                  </div>
+                </div>
+                <div class="timeline-entry entry-iot">
+                  <span class="entry-icon">🏠</span>
+                  <div>
+                    <div class="entry-title">Smart Home: Робот-пылесос</div>
+                    <div class="entry-desc">Интеграция голосового управления через Yandex API.</div>
+                  </div>
+                </div>
+                <div class="timeline-entry entry-project">
+                  <span class="entry-icon">🌐</span>
+                  <div>
+                    <div class="entry-title">Point Grow 2.0</div>
+                    <div class="entry-desc">Масштабное обновление сайта для школьной программы «Точка Роста».</div>
+                  </div>
+                </div>
+                <div class="timeline-entry entry-award">
+                  <span class="entry-icon">🏆</span>
+                  <div>
+                    <div class="entry-title">НТО — Призёр <span class="badge badge-trophy">🏆 PRIZE</span></div>
+                    <div class="entry-desc">Профиль «Цифровые сенсорные системы», участник «Автоматизация бизнес-процессов».</div>
+                  </div>
+                </div>
+                <div class="timeline-entry entry-work">
+                  <span class="entry-icon">💼</span>
+                  <div>
+                    <div class="entry-title">РЭД СОФТ — QA Engineer <span class="badge badge-work">💼 WORK</span></div>
+                    <div class="entry-desc">Промышленное тестирование ПО и устройств, развитие критического мышления.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2025 -->
+          <div class="timeline-item reveal" data-side="right">
+            <div class="timeline-marker marker-present" style="--marker-color: #eab308;">
+              <span>🚩</span>
+              <span class="present-dot"></span>
+            </div>
+            <div class="timeline-card" style="--card-accent: #eab308;">
+              <div class="timeline-card-header" style="background: linear-gradient(135deg, #eab308, #f97316);">
+                <div>
+                  <div class="timeline-year">2025</div>
+                  <span class="present-badge">PRESENT</span>
+                </div>
+                <div class="timeline-card-titles">
+                  <div class="timeline-card-title">Leadership & Advanced Tech</div>
+                  <div class="timeline-card-subtitle">Лидерство и передовые технологии</div>
+                </div>
+              </div>
+              <div class="timeline-card-body">
+                <div class="timeline-entry entry-award">
+                  <span class="entry-icon">🏅</span>
+                  <div>
+                    <div class="entry-title">Олимпиада ТИИМ — 1 место <span class="badge badge-gold">🥇 GOLD</span></div>
+                    <div class="entry-desc">Подтверждение постоянного роста и мастерства.</div>
+                  </div>
+                </div>
+                <div class="timeline-entry entry-leadership">
+                  <span class="entry-icon">🏕</span>
+                  <div>
+                    <div class="entry-title">IT-смена «Олимп» <span class="badge badge-lead">👑 LEAD</span></div>
+                    <div class="entry-desc">Командир группы 3D-дизайна (Blender). Координировал команду, выстраивал процессы и дедлайны.</div>
+                  </div>
+                </div>
+                <div class="timeline-entry entry-iot">
+                  <span class="entry-icon">⚙</span>
+                  <div>
+                    <div class="entry-title">🚀 Робот-манипулятор 4DOF</div>
+                    <div class="entry-desc">Беспроводной мастер-слейв телеуправление через EMG + IMU на ESP8266.</div>
+                  </div>
+                </div>
+                <div class="timeline-entry entry-iot">
+                  <span class="entry-icon">🛰</span>
+                  <div>
+                    <div class="entry-title">StarLink Components</div>
+                    <div class="entry-desc">Участие в разработке компонентов для спутников StarLink.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-cmd"><span class="text-text-dim">$</span> ls ~/projects</span>
+          <h2 class="section-title gradient-text">Projects</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="filter-bar reveal">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="iot">IoT & Hardware</button>
+          <button class="filter-btn" data-filter="web">Web Apps</button>
+          <button class="filter-btn" data-filter="backend">Backend</button>
+        </div>
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Projects will be rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-cmd"><span class="text-text-dim">$</span> echo 'hello'</span>
+          <h2 class="section-title gradient-text">Get In Touch</h2>
+          <div class="section-line"></div>
+        </div>
+        <p class="section-subtitle reveal">
+          Have an interesting project? Want to build something cool with IoT?
+          Or just want to say hi? My inbox is always open.
+        </p>
+        <div class="terminal contact-terminal reveal">
+          <div class="terminal-header">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="terminal-title">contact@pasha33pro</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="text-primary">$</span> cat contact_info.json</p>
+            <p class="mt">{</p>
+            <p class="ml">"<span class="key">email</span>": "<span class="str">hello@pasha33pro.dev</span>",</p>
+            <p class="ml">"<span class="key">telegram</span>": "<span class="str">@pasha33pro</span>",</p>
+            <p class="ml">"<span class="key">github</span>": "<span class="str">github.com/Pasha33Pro</span>",</p>
+            <p class="ml">"<span class="key">response_time</span>": "<span class="str">&lt; 24h</span>"</p>
+            <p>}</p>
+          </div>
+        </div>
+        <div class="contact-buttons reveal">
+          <a href="mailto:hello@pasha33pro.dev" class="btn btn-primary">✉ Send Email</a>
+          <a href="https://github.com/Pasha33Pro" target="_blank" class="btn btn-outline">⚡ GitHub</a>
+          <a href="https://t.me/pasha33pro" target="_blank" class="btn btn-outline btn-secondary-outline">⚡ Telegram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>
+        <span class="text-primary">&lt;</span><span class="text-secondary">/</span><span>Pasha33Pro</span><span class="text-primary">&gt;</span>
+        <span class="footer-copy">© 2025 — Built with passion & caffeine</span>
+      </p>
+    </footer>
+
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
 </html>
