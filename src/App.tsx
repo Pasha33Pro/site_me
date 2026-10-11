@@ -4,7 +4,9 @@ import {
   Terminal, Cpu, Wifi, Code2, Server, Smartphone, 
   Github, Linkedin, Mail, ExternalLink, ChevronDown,
   CircuitBoard, Cloud, Database, Shield, Zap, Globe,
-  Menu, X, ArrowUpRight, Radio, HardDrive, Layers
+  Menu, X, ArrowUpRight, Radio, HardDrive, Layers,
+  Trophy, Briefcase, GraduationCap, Rocket, Medal,
+  Bot, Home, Mic, Award, Flag, Satellite, Cog
 } from 'lucide-react';
 
 function App() {
@@ -39,7 +41,7 @@ function App() {
             </a>
             
             <div className="hidden md:flex items-center gap-8">
-              {['home', 'about', 'skills', 'projects', 'contact'].map((section) => (
+              {['home', 'about', 'skills', 'roadmap', 'projects', 'contact'].map((section) => (
                 <a
                   key={section}
                   href={`#${section}`}
@@ -67,7 +69,7 @@ function App() {
               exit={{ opacity: 0, height: 0 }}
               className="md:hidden bg-bg-card border-b border-border"
             >
-              {['home', 'about', 'skills', 'projects', 'contact'].map((section) => (
+              {['home', 'about', 'skills', 'roadmap', 'projects', 'contact'].map((section) => (
                 <a
                   key={section}
                   href={`#${section}`}
@@ -172,6 +174,9 @@ function App() {
 
       {/* Skills Section */}
       <SkillsSection />
+
+      {/* Roadmap Section */}
+      <RoadmapSection />
 
       {/* Projects Section */}
       <ProjectsSection />
@@ -358,6 +363,357 @@ function SkillsSection() {
         </motion.div>
       </div>
     </section>
+  );
+}
+
+function RoadmapSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+
+  const roadmapData = [
+    {
+      year: '2022',
+      title: 'Foundation',
+      subtitle: 'Закладка фундамента',
+      color: 'from-blue-500 to-cyan-500',
+      borderColor: 'border-blue-500/40',
+      bgColor: 'bg-blue-500/10',
+      textColor: 'text-blue-400',
+      icon: <GraduationCap size={22} />,
+      items: [
+        {
+          type: 'education',
+          title: 'KiberOne Academy',
+          description: 'Первое знакомство с Python и алгоритмическим мышлением.',
+          icon: <GraduationCap size={14} />,
+        },
+        {
+          type: 'project',
+          title: 'Первый проект: Peugeot 301 в 2D',
+          description: 'Отрисовка машины с помощью Python Turtle — первый опыт визуализации кодом.',
+          icon: <Code2 size={14} />,
+        },
+        {
+          type: 'inspiration',
+          title: 'Книга «Python глазами хакера»',
+          description: 'BHV — сформировала взгляд на код как на искусство.',
+          icon: <Zap size={14} />,
+        },
+      ],
+    },
+    {
+      year: '2023',
+      title: 'Expansion & First Wins',
+      subtitle: 'Расширение стека и первые победы',
+      color: 'from-green-500 to-emerald-500',
+      borderColor: 'border-green-500/40',
+      bgColor: 'bg-green-500/10',
+      textColor: 'text-green-400',
+      icon: <Rocket size={22} />,
+      items: [
+        {
+          type: 'education',
+          title: 'Академия TOP',
+          description: 'Освоение C++, C#, SQL и FullStack Web (HTML, CSS, JS, хостинг, домены, SSL).',
+          icon: <GraduationCap size={14} />,
+        },
+        {
+          type: 'iot',
+          title: 'IoT Start: NS8266',
+          description: 'Network Scan ESP8266 — первый шаг в мир интернета вещей и микроконтроллеров.',
+          icon: <Cpu size={14} />,
+        },
+        {
+          type: 'project',
+          title: 'Хакатон Кванториума: TG-33',
+          description: 'Соло-разработка образовательного Telegram-бот-квеста менее чем за 2 недели с нуля.',
+          icon: <Bot size={14} />,
+        },
+        {
+          type: 'award',
+          title: '🥉 Олимпиада ТИИМ',
+          description: '3 место — первая олимпиадная награда.',
+          icon: <Medal size={14} />,
+          badge: 'bronze',
+        },
+      ],
+    },
+    {
+      year: '2024',
+      title: 'Automation & NLP',
+      subtitle: 'Автоматизация и профессиональный опыт',
+      color: 'from-purple-500 to-pink-500',
+      borderColor: 'border-purple-500/40',
+      bgColor: 'bg-purple-500/10',
+      textColor: 'text-purple-400',
+      icon: <Bot size={22} />,
+      items: [
+        {
+          type: 'project',
+          title: 'WT_Control',
+          description: 'Система голосового управления танками в War Thunder через NLP.',
+          icon: <Mic size={14} />,
+        },
+        {
+          type: 'project',
+          title: 'Voice Assistant',
+          description: 'Голосовое управление ПК с уведомлениями в Telegram.',
+          icon: <Mic size={14} />,
+        },
+        {
+          type: 'iot',
+          title: 'Smart Home: Робот-пылесос',
+          description: 'Интеграция голосового управления через Yandex API.',
+          icon: <Home size={14} />,
+        },
+        {
+          type: 'project',
+          title: 'Point Grow 2.0',
+          description: 'Масштабное обновление сайта для школьной программы «Точка Роста».',
+          icon: <Globe size={14} />,
+        },
+        {
+          type: 'award',
+          title: '🏆 НТО — Призёр',
+          description: 'Профиль «Цифровые сенсорные системы», участник «Автоматизация бизнес-процессов».',
+          icon: <Trophy size={14} />,
+          badge: 'trophy',
+        },
+        {
+          type: 'work',
+          title: '💼 РЭД СОФТ — QA Engineer',
+          description: 'Промышленное тестирование ПО и устройств, развитие критического мышления.',
+          icon: <Briefcase size={14} />,
+          badge: 'work',
+        },
+      ],
+    },
+    {
+      year: '2025',
+      title: 'Leadership & Advanced Tech',
+      subtitle: 'Лидерство и передовые технологии',
+      color: 'from-yellow-500 to-orange-500',
+      borderColor: 'border-yellow-500/40',
+      bgColor: 'bg-yellow-500/10',
+      textColor: 'text-yellow-400',
+      icon: <Flag size={22} />,
+      isPresent: true,
+      items: [
+        {
+          type: 'award',
+          title: '🥇 Олимпиада ТИИМ — 1 место',
+          description: 'Подтверждение постоянного роста и мастерства.',
+          icon: <Award size={14} />,
+          badge: 'gold',
+        },
+        {
+          type: 'leadership',
+          title: '🏕️ IT-смена «Олимп»',
+          description: 'Командир группы 3D-дизайна (Blender). Координировал команду, выстраивал процессы и дедлайны.',
+          icon: <Flag size={14} />,
+          badge: 'lead',
+        },
+        {
+          type: 'iot',
+          title: '🚀 Робот-манипулятор 4DOF',
+          description: 'Беспроводной мастер-слейв телеуправление через EMG + IMU на ESP8266.',
+          icon: <Cog size={14} />,
+        },
+        {
+          type: 'iot',
+          title: '🛰️ StarLink Components',
+          description: 'Участие в разработке компонентов для спутников StarLink.',
+          icon: <Satellite size={14} />,
+        },
+      ],
+    },
+  ];
+
+  const typeColors: Record<string, string> = {
+    education: 'text-blue-400 bg-blue-500/10 border-blue-500/30',
+    project: 'text-primary bg-primary/10 border-primary/30',
+    iot: 'text-secondary bg-secondary/10 border-secondary/30',
+    inspiration: 'text-yellow-400 bg-yellow-500/10 border-yellow-500/30',
+    award: 'text-amber-400 bg-amber-500/10 border-amber-500/30',
+    work: 'text-pink-400 bg-pink-500/10 border-pink-500/30',
+    leadership: 'text-orange-400 bg-orange-500/10 border-orange-500/30',
+  };
+
+  return (
+    <section id="roadmap" className="py-24 relative overflow-hidden" ref={ref}>
+      {/* Background decoration */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/3 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-0 w-72 h-72 bg-secondary/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+        >
+          <SectionTitle title="Roadmap" subtitle="cat journey.log" />
+          <p className="text-center text-text-dim mt-4 max-w-2xl mx-auto">
+            От первого «Hello World» до спутниковых технологий — путь, который я прошёл и продолжаю идти.
+          </p>
+        </motion.div>
+
+        {/* Timeline */}
+        <div className="relative mt-16">
+          {/* Central line */}
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500/50 via-purple-500/50 via-green-500/50 to-yellow-500/50 md:-translate-x-px"></div>
+
+          <div className="space-y-16">
+            {roadmapData.map((yearData, idx) => (
+              <TimelineYear
+                key={yearData.year}
+                data={yearData}
+                index={idx}
+                typeColors={typeColors}
+                isInView={isInView}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+interface TimelineYearData {
+  year: string;
+  title: string;
+  subtitle: string;
+  color: string;
+  borderColor: string;
+  bgColor: string;
+  textColor: string;
+  icon: React.ReactNode;
+  isPresent?: boolean;
+  items: Array<{
+    type: string;
+    title: string;
+    description: string;
+    icon: React.ReactNode;
+    badge?: string;
+  }>;
+}
+
+function TimelineYear({ 
+  data, 
+  index, 
+  typeColors,
+  isInView 
+}: { 
+  data: TimelineYearData; 
+  index: number;
+  typeColors: Record<string, string>;
+  isInView: boolean;
+}) {
+  const isLeft = index % 2 === 0;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, delay: index * 0.15 }}
+      className="relative"
+    >
+      {/* Year marker on the line */}
+      <div className="absolute left-6 md:left-1/2 -translate-x-1/2 z-20">
+        <div className={`relative flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br ${data.color} shadow-lg ${data.isPresent ? 'glow-pulse' : ''}`}>
+          <div className="absolute inset-0 rounded-full bg-bg-dark/40"></div>
+          <div className="relative text-white">
+            {data.icon}
+          </div>
+          {data.isPresent && (
+            <span className="absolute -top-1 -right-1 w-3 h-3 bg-primary rounded-full animate-pulse border-2 border-bg-dark"></span>
+          )}
+        </div>
+      </div>
+
+      {/* Content card */}
+      <div className={`ml-20 md:ml-0 ${isLeft ? 'md:mr-[calc(50%+2rem)]' : 'md:ml-[calc(50%+2rem)]'}`}>
+        <motion.div
+          initial={{ opacity: 0, x: isLeft ? -30 : 30 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.5, delay: index * 0.15 + 0.2 }}
+          className={`bg-bg-card border ${data.borderColor} rounded-xl overflow-hidden card-glow transition-all duration-300`}
+        >
+          {/* Year header */}
+          <div className={`bg-gradient-to-r ${data.color} p-4 relative overflow-hidden`}>
+            <div className="absolute inset-0 bg-bg-dark/40"></div>
+            <div className="relative flex items-center justify-between">
+              <div>
+                <div className="font-mono text-3xl font-bold text-white">{data.year}</div>
+                {data.isPresent && (
+                  <span className="inline-block mt-1 px-2 py-0.5 bg-primary/20 border border-primary/40 rounded text-xs font-mono text-primary">
+                    PRESENT
+                  </span>
+                )}
+              </div>
+              <div className="text-right">
+                <div className="text-white font-semibold">{data.title}</div>
+                <div className="text-white/70 text-sm">{data.subtitle}</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Items */}
+          <div className="p-4 space-y-3">
+            {data.items.map((item, itemIdx) => (
+              <motion.div
+                key={itemIdx}
+                initial={{ opacity: 0, x: -10 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.3, delay: index * 0.15 + 0.3 + itemIdx * 0.05 }}
+                className={`flex gap-3 p-3 rounded-lg border ${typeColors[item.type] || typeColors.project} transition-all hover:scale-[1.01]`}
+              >
+                <div className="flex-shrink-0 mt-0.5">
+                  {item.icon}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="font-semibold text-sm text-text flex items-center gap-2 flex-wrap">
+                    {item.title}
+                    {item.badge && (
+                      <BadgeTag type={item.badge} />
+                    )}
+                  </div>
+                  <p className="text-text-dim text-xs mt-1 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </motion.div>
+  );
+}
+
+function BadgeTag({ type }: { type: string }) {
+  const styles: Record<string, string> = {
+    bronze: 'bg-amber-700/30 text-amber-400 border-amber-600/40',
+    gold: 'bg-yellow-500/30 text-yellow-300 border-yellow-500/40',
+    trophy: 'bg-purple-500/30 text-purple-300 border-purple-500/40',
+    work: 'bg-pink-500/30 text-pink-300 border-pink-500/40',
+    lead: 'bg-orange-500/30 text-orange-300 border-orange-500/40',
+  };
+
+  const labels: Record<string, string> = {
+    bronze: '🥉 BRONZE',
+    gold: '🥇 GOLD',
+    trophy: '🏆 PRIZE',
+    work: '💼 WORK',
+    lead: '👑 LEAD',
+  };
+
+  return (
+    <span className={`px-2 py-0.5 rounded text-[10px] font-mono font-bold border ${styles[type] || styles.trophy}`}>
+      {labels[type] || type}
+    </span>
   );
 }
 
